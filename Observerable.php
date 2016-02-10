@@ -7,7 +7,6 @@
  * @version
  */
 
-
 /**
  * 观察者接口，规定其中的方法（统一格式）
  * Interface Observerable
@@ -55,7 +54,10 @@ class ObserverableB implements Observerable
 }
 
 
-
+/**
+ * 被观察者（注册、删除、通知观察者）
+ * Class beObserverable
+ */
 class beObserverable
 {
     private $observers = array(); //保存观察者
@@ -83,7 +85,7 @@ class beObserverable
     }
 
     /**
-     * 触发更新操作（所有观察者）
+     * 触发更新操作（通知所有观察者）
      */
     public function trigger(){
 
@@ -94,8 +96,7 @@ class beObserverable
 
 }
 
-
-
+//usage:
 $observerableA = new ObserverableA(); //观察者A
 $observerableB = new ObserverableB(); //观察者B
 
@@ -105,11 +106,5 @@ $beObserverable = new beObserverable(); //被观察者
 $beObserverable->attach($observerableA);
 $beObserverable->attach($observerableB);
 
-//触发更新操作（影响所有观察者）
-$beObserverable->trigger();
-
-
-
-
-
-
+//触发更新操作（通知所有观察者）
+$beObserverable->trigger(); //结果：这里是观察者A，这里可以做一些更新操作这里是观察者B，这里可以做一些更新操作
