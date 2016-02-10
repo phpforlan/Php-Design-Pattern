@@ -102,7 +102,7 @@ $observerableB = new ObserverableB(); //观察者B
 
 $beObserverable = new beObserverable(); //被观察者
 
-//添加观察者A和观察者B
+//注册观察者A和观察者B
 $beObserverable->attach($observerableA);
 $beObserverable->attach($observerableB);
 
