@@ -16,13 +16,18 @@ class Singleton
     /**
      * 构造方法私有化，不允许外部直接创建对象
      */
-    private function __construct(){
+    private function __construct()
+    {
 
     }
 
-    public static function getInstance(){
-        if(is_null(self::$instance)){
-            self::$instance = new Singleton();
+    /**
+     * 获取单例
+     */
+    public static function getInstance()
+    {
+        if( !self::$instance instanceof self ){
+            self::$instance = new self();
         }
 
         return self::$instance;
@@ -31,18 +36,9 @@ class Singleton
     /**
      * 防止用户克隆实例
      */
-    public function __clone(){
-        die('Clone is not allowed.'.E_USER_ERROR);
+    public function __clone()
+    {
+       exit('clone is not allowed!'. "\n"); 
     }
 
-}
-
-//usage:
-$singleton1 = Singleton::getInstance();
-$singleton2 = Singleton::getInstance();
-
-if( $singleton1 === $singleton2 ){
-    echo '同一个实例';
-}else{
-    echo '不是同一个实例';
 }
