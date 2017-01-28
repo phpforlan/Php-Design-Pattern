@@ -9,6 +9,18 @@ class Observable implements ObservableInterface
 {
     private $observers = []; //保存所有观察者
 
+    private $name = '被观察者A'; //保存被观察者名称
+
+    /**
+     * 魔术方法__get()，用于获取不存在的属性时,调用该方法
+     * @param string $name 属性名称
+     * @return mixed
+     */
+    public function __get($name = '')
+    {
+        return $this->$name;
+    }
+
     /**
      * 附加观察者
      * @return boolean
@@ -48,7 +60,7 @@ class Observable implements ObservableInterface
         if( !empty($this->observers) ){
             foreach($this->observers as $observerItem){
                 if( method_exists($observerItem, 'doSomeThing') ){
-                    $observerItem->doSomeThing();
+                    $observerItem->doSomeThing($this);
                 }
             }
         }

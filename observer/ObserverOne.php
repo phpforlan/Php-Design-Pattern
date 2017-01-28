@@ -10,9 +10,9 @@ class ObserverOne implements ObserverInterface
     /**
      * 行为方法
      */
-    public function doSomeThing()
+    public function doSomeThing(ObservableInterface $observable)
     {
-        echo '观察者one干了一些事情!'. "\n";
+        echo $observable->name. '通知观察者one干了一些事情!'. "\n";
     }
 
 }

@@ -10,6 +10,6 @@ interface ObserverInterface
     /**
      * 行为方法
      */
-    public function doSomeThing();
+    public function doSomeThing(ObservableInterface $observable);
 
 }
