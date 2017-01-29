@@ -15,4 +15,12 @@ class mysqlFactory implements factoryInterface
         return new dbMysql();
     }
 
+    /**
+     * 创建用户实例
+     */
+    public function createUser()
+    {
+        return new userMysql();
+    }
+
 }

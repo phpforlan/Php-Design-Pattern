@@ -14,4 +14,12 @@ class sqliteFactory implements factoryInterface
     {
         return new dbSqlite();
     }
+
+    /**
+     * 创建用户实例
+     */
+    public function createUser()
+    {
+        return new userSqlite();
+    }
 }

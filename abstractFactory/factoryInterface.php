@@ -12,4 +12,9 @@ interface factoryInterface
      */
     public function createDb();
 
+    /**
+     * 插入新用户
+     */
+    public function createUser();
+
 }

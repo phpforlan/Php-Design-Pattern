@@ -12,7 +12,7 @@ class dbSqlite implements dbInterface
      */
     public function conn()
     {
-        echo '连接sqlite数据库成功!'. "\n";
+        echo '连接Sqlite数据库成功!'. "\n";
     }
 
 }

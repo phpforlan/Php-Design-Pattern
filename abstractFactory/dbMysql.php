@@ -9,7 +9,7 @@ class dbMysql implements dbInterface
 {
     public function conn()
     {
-        echo '连接Mysql数据成功!'. "\n";
+        echo '连接Mysql数据库成功!'. "\n";
     }
 
 }
