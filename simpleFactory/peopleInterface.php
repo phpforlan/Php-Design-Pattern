@@ -1,15 +1,15 @@
 <?php
 /**
- * @file peopleInterface.php
+ * @file PeopleInterface.php
  * @author lurenzhong@xiaomi.com
  * @brief 人类接口
  */
 
-interface peopleInterface
+interface PeopleInterface
 {
     /**
-     * 说话方法
-     * @return void
+     * 定义说话的抽象方法
      */
     public function say();
+
 }

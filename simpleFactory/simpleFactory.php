@@ -1,26 +1,27 @@
 <?php
 /**
- * @file simpleFactory.php
+ * @file SimpleFactory.php
  * @author lurenzhong@xiaomi.com
- * @brief 简单工厂模式-通过静态方法创建对象
+ * @brief 简单工厂类( 通过调用静态方法来生成对象实例 )
  */
 
-class simpleFactory 
+class SimpleFactory
 {
     /**
-     * 创建男人对象
+     * 生成男人对象实例
      */
-    public static function createMan()
+    public static function makeMan()
     {
         return new Man();
     }
 
+
     /**
-     * 创建女人对象
+     * 生成女人对象实例
      */
-    public static function createWoman()
+    public static function makeWoman()
     {
         return new Woman();
     }
-    
+
 }

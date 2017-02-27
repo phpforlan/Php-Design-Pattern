@@ -1,15 +1,18 @@
 <?php
 /**
- * @file man.php
+ * @file Man.php
  * @author lurenzhong@xiaomi.com
  * @brief 实现人类接口的男人类
  */
 
-class man implements peopleInterface
+class Man implements PeopleInterface
 {
+    /**
+     * 男人说话的方法
+     */
     public function say()
     {
-        echo '我是男人'. "\n";
+        echo 'I am a man, i am talking!'. "\n";
     }
 
 }

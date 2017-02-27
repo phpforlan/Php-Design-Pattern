@@ -1,11 +1,11 @@
 <?php
 /**
  * @file testSimpleFactory.php
- * @author lurenzhong@xiaomi.com
- * @brief 测试简单工厂模式
+ * @author lurenzhong@xiaommi.com
+ * @brief 测试简单工厂模式( 在不暴露生成逻辑的前提下，生成一个对象实例 )
  */
 
-/** 注册自动加载函数 */
+/** 注册自动加载 */
 function autoload($className)
 {
     require_once './'. $className. '.php';
@@ -13,9 +13,13 @@ function autoload($className)
 
 spl_autoload_register('autoload');
 
-/** 测试 */
-$man = simpleFactory::createMan();
-$man->say(); //我是男人
 
-$woman = simpleFactory::createWoman();
-$woman->say(); //我是女人
+/** 测试简单工厂模式 */
+
+//生成一个男人对象实例
+$manObj = SimpleFactory::makeMan();
+$manObj->say();
+
+//生成一个女人对象实例
+$womanObj = SimpleFactory::makeWoman();
+$womanObj->say();
