@@ -17,9 +17,9 @@ spl_autoload_register('autoload');
 /** 测试简单工厂模式 */
 
 //生成一个男人对象实例
-$manObj = SimpleFactory::makeMan();
+$manObj = SimpleFactory::createMan();
 $manObj->say();
 
 //生成一个女人对象实例
-$womanObj = SimpleFactory::makeWoman();
+$womanObj = SimpleFactory::createWoman();
 $womanObj->say();

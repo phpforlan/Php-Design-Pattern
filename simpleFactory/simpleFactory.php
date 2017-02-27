@@ -8,18 +8,18 @@
 class SimpleFactory
 {
     /**
-     * 生成男人对象实例
+     * 创建男人对象实例
      */
-    public static function makeMan()
+    public static function createMan()
     {
         return new Man();
     }
 
 
     /**
-     * 生成女人对象实例
+     * 创建女人对象实例
      */
-    public static function makeWoman()
+    public static function createWoman()
     {
         return new Woman();
     }
