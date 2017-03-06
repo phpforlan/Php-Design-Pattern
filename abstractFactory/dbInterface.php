@@ -1,11 +1,11 @@
 <?php
 /**
- * @file dbInterface.php
+ * @file DbInterface.php
  * @author lurenzhong@xiaomi.com
  * @brief db接口    
  */
 
-interface dbInterface
+interface DbInterface
 {
     /**
      * 连接数据库

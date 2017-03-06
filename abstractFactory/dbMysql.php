@@ -1,11 +1,11 @@
 <?php
 /**
- * @file dbMysql.php
+ * @file DbMysql.php
  * @author lurenzhong@xiaomi.com
  * @brief 实现db接口的dbMysql类
  */
 
-class dbMysql implements dbInterface
+class DbMysql implements DbInterface
 {
     public function conn()
     {

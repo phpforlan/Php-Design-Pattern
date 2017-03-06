@@ -15,19 +15,17 @@ spl_autoload_register('autoload');
 /** 测试 */
 
 //1.测试mysql工厂
-$mysqlFactory = new mysqlFactory(); //实例化Mysql工厂
-$dbMysql = $mysqlFactory->createDb(); //创建Mysql实例
-$dbMysql->conn();
+$mysqlDbObj = MysqlFactory::createDb(); //创建Mysql实例
+$mysqlDbObj->conn();
 
-$userMysql = $mysqlFactory->createUser(); //创建user实例
-$userMysql->insertUser();
+$mysqlUserObj = MysqlFactory::createUser(); //创建user实例
+$mysqlUserObj->insertUser();
 
 echo '----------------'. "\n";
 
 //2.测试sqlite工厂 
-$sqliteFactory = new sqliteFactory(); //实例化sqlite工厂
-$dbSqlite = $sqliteFactory->createDb(); //创建sqlite实例
-$dbSqlite->conn();
+$sqliteDbObj = SqliteFactory::createDb(); //创建sqlite实例
+$sqliteDbObj->conn();
 
-$userSqlite = $sqliteFactory->createUser(); //创建user实例
-$userSqlite->insertUser();
+$sqliteUserObj = SqliteFactory::createUser(); //创建user实例
+$sqliteUserObj->insertUser();

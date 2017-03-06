@@ -1,11 +1,11 @@
 <?php
 /**
- * @file userMysql.php
+ * @file UserMysql.php
  * @author lurenzhong@xiaomi.com
  * @brief mysql用户类
  */
 
-class userMysql implements userInterface
+class UserMysql implements UserInterface
 {
     /**
      * 插入新用户

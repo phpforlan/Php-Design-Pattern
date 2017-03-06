@@ -1,24 +1,24 @@
 <?php
 /**
- * @file mysqlFactory.php
+ * @file MysqlFactory.php
  * @author lurenzhong@xiaomi.com
  * @brief mysql工厂类
  */
 
-class mysqlFactory implements factoryInterface
+class MysqlFactory implements FactoryInterface
 {
     /**
-     * 创建数据库实例
+     * 创建Mysql数据库实例
      */
-    public function createDb()
+    public static function createDb()
     {
         return new dbMysql();
     }
 
     /**
-     * 创建用户实例
+     * 创建Mysql用户实例
      */
-    public function createUser()
+    public static function createUser()
     {
         return new userMysql();
     }

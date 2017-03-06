@@ -1,11 +1,11 @@
 <?php
 /**
- * @file dbSqlite.php
+ * @file DbSqlite.php
  * @author lurenzhong@xiaomi.com
  * @brief 实现db接口的dbSqlite类
  */
 
-class dbSqlite implements dbInterface
+class DbSqlite implements DbInterface
 {
     /**
      * 连接数据库
